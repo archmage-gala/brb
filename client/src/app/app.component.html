@@ -1,0 +1,36 @@
+<mat-toolbar color="primary" class="mat-elevation-z6">
+  <div style="display: flex; align-items: center; width: 100%">
+    <h1>B.R.B</h1>
+    <pre style="margin-left: auto">{{address}}</pre>
+  </div>
+</mat-toolbar>
+<div style="padding: 32px">
+  <div style="display: flex; flex-direction: column; align-items: center; gap: 32px">
+    <div style="display: flex; align-items: center; gap: 16px; font-size: 32px">
+      <img src="assets/crc.png" style="max-height: 64px; height: 64px">
+      <span>{{ balance | number }}</span>
+      <span>CRC</span>
+      <button mat-flat-button color="secondary" aria-label="GIMME CRC" (click)="gimme()">
+        $GIMME
+      </button>
+    </div>
+    <div #burnButton>
+      <button mat-fab color="primary" aria-label="BURN CRC" (click)="burn()" class="burn-icon-button">
+        <mat-icon>local_fire_department</mat-icon>
+      </button>
+    </div>
+    <div style="display: flex; align-items: center; gap: 32px;">
+      <button mat-fab color="secondary" aria-label="DECREMENT BURN" (click)="decrement()">
+        &mdash;
+      </button>
+      <h1 style="margin: 0">{{amount | number}}</h1>
+      <button mat-fab color="secondary" aria-label="INCREMENT BURN" (click)="increment()">
+        <mat-icon>add</mat-icon>
+      </button>
+    </div>
+    <div>
+      <h1>💸 {{pot | number}} &commat; {{chance | percent: '1.1-2'}}</h1>
+    </div>
+  </div>
+</div>
+

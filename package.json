@@ -1,0 +1,11 @@
+{
+  "name": "Big Red Button",
+  "version": "1.0.0",
+  "license": "Apache-2.0",
+  "description": "GalaChain example project: Big Red Button",
+  "workspaces": [
+    "client",
+    "server"
+  ],
+  "private": true
+}

@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #303030;
+  color: #ddd;
+  overflow: hidden;
+}
+
+.burn-icon-button {
+  width: 256px !important;
+  height: 256px !important;
+  padding: 0px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+
+  & > *[role=img] {
+    width: 128px;
+    height: 128px;
+    font-size: 128px;
+
+    svg {
+      width: 128px;
+      height: 128px;
+    }
+  }
+
+  .mat-mdc-button-touch-target {
+    width: 256px !important;
+    height: 256px !important;
+  }
+}
+
+img {
+  pointer-events: none;
+}
